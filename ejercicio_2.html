@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="ejercicio_2.css">
+</head>
+<body>
+    <div class="container">        
+
+        <div id="setup-screen">
+            <div class="setup-container">
+                <div class="left-side">
+                    <div class="input-group">
+                        <label class="input-label">1. Ingresa los participantes</label>
+                        <textarea id="participants-input" placeholder="Cada participante debe estar en una nueva línea"></textarea>
+                        <div class="participant-counter">0</div>
+                    </div>
+                    <div class="note">Agrega un * para indicar líderes de grupo. *Lider</div>
+                </div>
+                
+                <div class="right-side">
+                    <div class="input-group">
+                        <label class="input-label">2. Cómo dividir:</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" name="division-method" id="by-teams" checked>
+                                <label for="by-teams">Cantidad de equipos</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" name="division-method" id="by-members">
+                                <label for="by-members">Participantes por equipo</label>
+                            </div>
+                        </div>
+                        
+                        <div class="select-container">
+                            <select id="division-value">
+
+                            </select>
+                            <span class="select-label" id="division-label">/</span>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">3. Título</label>
+                        <input type="text" id="title-input" placeholder="Copa del Mundo Qatar 2022">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="button-group">
+                <button class="clear" id="clear-btn">Limpiar</button>
+                <button class="generate" id="generate-btn">Generar equipos</button>
+            </div>
+        </div>
+        
+
+        <div id="results-screen" class="results-container">
+            <h2 id="results-title"></h2>
+            <div id="teams-container" class="teams-container">
+
+            </div>
+            
+            <div class="action-buttons">
+                <button id="download-btn">Descargar JPG</button>
+                <button id="copy-clipboard-btn">Copiar al portapapeles</button>
+                <button id="copy-columns-btn">Copiar en columnas</button>
+                <button id="back-btn" class="btn-back">Volver</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="ejercicio_2.js"></script>
+</body>
+</html>

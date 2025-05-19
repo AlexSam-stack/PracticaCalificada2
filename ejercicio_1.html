@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ruleta del Aula Virtual</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    canvas {
+      border: 1px solid #000;
+      margin-top: 20px;
+    }
+    textarea {
+      width: 500px;
+      height: 150px;
+      margin-top: 10px;
+    }
+    .botones {
+      margin: 10px;
+    }
+    .botones button {
+      margin: 0 5px;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ruleta del Aula Virtual</h1>
+  <canvas id="lienzo" width="500" height="500"></canvas>
+  <div class="botones">
+    <button onclick="girarRuleta()">Girar</button>
+    <button onclick="reiniciarRuleta()">Reiniciar (R)</button>
+    <button onclick="habilitarEdicion()">Editar (E)</button>
+    <button onclick="pantallaCompleta()">Pantalla Completa (F)</button>
+    <button onclick="ocultarSeleccionado()">Ocultar Seleccionado (S)</button>
+  </div>
+
+  <div><strong>RESPUESTA</strong></div>
+  <div id="respuesta" style="font-size: 20px; margin: 10px;"></div>
+
+  <textarea id="elementos" placeholder="Ingresa los elementos aquí..."></textarea>
+
+  <script src="ejercicio_1.js"></script>
+</body>
+</html>
